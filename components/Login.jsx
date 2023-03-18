@@ -1,16 +1,15 @@
 import React from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, Image, StyleSheet, Text, View } from 'react-native'
 
-export default function Login() {
+export default function Login({ navigation }) {
     return (
         <View style={styles.container} >
-            <View style={styles.img}>
-                <Text style={styles.text}>image</Text>
-            </View>
+            <Image style={styles.img} source={require('./assets/logo.jpg')} />
             <View style={styles.signincontainer}>
                 <Text style={{ ...styles.text, fontSize: 24 }}>MEND THE PIPE</Text>
-                <Text style={styles.text}>Tell us where & We are there</Text>
-                <Button title="Login" style={styles.button} />
+                <Text style={{ ...styles.text, marginBottom: 100, fontWeight: 'normal', fontVariant: 'italic' }}>Tell us where & We are there</Text>
+                <Button title="Login" onPress={() => { navigation.navigate('Dashboard') }} />
+                <Text style={{ ...styles.text, textAlign: 'left', marginTop: 5, fontWeight: 'normal' }}>Register</Text>
             </View>
         </View>
     )
@@ -26,12 +25,13 @@ const styles = StyleSheet.create({
 
     },
     img: {
-        borderRadius: 50,
+        borderRadius: 100,
         alignSelf: 'center',
-        width: 100,
-        height: 100,
+        width: 200,
+        height: 200,
         marginTop: 100,
         backgroundColor: 'blue',
+
 
 
     },
@@ -40,15 +40,24 @@ const styles = StyleSheet.create({
         borderTopStartRadius: 50,
         borderTopRightRadius: 50,
         backgroundColor: '#000000',
-        marginTop: 100
+        marginTop: 50,
+        paddingHorizontal: 50,
+
     },
     text: {
         color: 'white',
         textAlign: 'center',
         marginTop: 25,
         fontWeight: 'bold'
+
     },
+
     button: {
-        width: 100
+        height: 60,
+        backgroundColor: '#4D4AFA',
+        alignItems: 'center',
+        padding: 15,
+
     }
+
 })
