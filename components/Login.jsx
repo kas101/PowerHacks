@@ -1,6 +1,8 @@
 import React from 'react'
 import { Button, Image, StyleSheet, Text, View } from 'react-native'
 
+//Login screen
+//intial page seen by user
 export default function Login({ navigation }) {
     return (
         <View style={styles.container} >
