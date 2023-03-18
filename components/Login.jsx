@@ -9,7 +9,7 @@ export default function Login({ navigation }) {
                 <Text style={{ ...styles.text, fontSize: 24 }}>MEND THE PIPE</Text>
                 <Text style={{ ...styles.text, marginBottom: 100, fontWeight: 'normal', fontVariant: 'italic' }}>Tell us where & We are there</Text>
                 <Button title="Login" onPress={() => { navigation.navigate('Dashboard') }} />
-                <Text style={{ ...styles.text, textAlign: 'left', marginTop: 5, fontWeight: 'normal' }}>Register</Text>
+                <Text style={{ ...styles.text, textAlign: 'left', marginTop: 10, fontWeight: 'normal' }} onPress={() => { navigation.navigate('Register') }}>Register</Text>
             </View>
         </View>
     )
