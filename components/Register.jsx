@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, Image, StyleSheet, Text, View } from 'react-native'
-import { TextInput } from 'react-native-gesture-handler'
+import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native'
+
 
 //Regiter screen
 //administor user registration
