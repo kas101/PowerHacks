@@ -2,17 +2,17 @@ import React from 'react'
 import { Button, Image, StyleSheet, Text, View } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 
-//Login screen
-//intial page seen by user
+//Regiter screen
+//administor user registration
 export default function Register({ navigation }) {
     return (
         <View style={styles.container} >
             <Image style={styles.img} source={require('./assets/logo.jpg')} />
             <View style={styles.signincontainer}>
                 <Text style={{ ...styles.text, fontSize: 24 }}>MEND THE PIPE</Text>
-                <Text style={{ ...styles.text, marginBottom: 10, fontWeight: 'normal', fontVariant: 'italic' }}>Tell us where & We are there</Text>
-                <TextInput placeholder='Email' style={styles.input} />
-                <TextInput placeholder='Password' style={{ ...styles.input, marginTop: 10, marginBottom: 15 }} />
+                <Text style={{ ...styles.text, marginBottom: 30, fontWeight: 'normal', fontVariant: 'italic' }}>Tell us where & We are there</Text>
+                <TextInput placeholder='Email' style={styles.input} placeholderTextColor='#000000' />
+                <TextInput placeholder='Password' style={{ ...styles.input, marginTop: 10, marginBottom: 30 }} placeholderTextColor="#000000" />
                 <Button title="Register" onPress={() => { navigation.navigate('Dashboard') }} />
 
             </View>
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     input: {
         height: 65,
         backgroundColor: '#ffffff',
-        borderRadius: 5
+        borderRadius: 5,
     }
 
 })

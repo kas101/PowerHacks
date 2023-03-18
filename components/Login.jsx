@@ -27,11 +27,11 @@ const styles = StyleSheet.create({
 
     },
     img: {
-        borderRadius: 50,
+        borderRadius: 100,
         alignSelf: 'center',
         width: 200,
         height: 200,
-        marginTop: 100,
+        marginTop: 50,
         backgroundColor: 'blue',
 
 
@@ -52,14 +52,5 @@ const styles = StyleSheet.create({
         marginTop: 25,
         fontWeight: 'bold'
 
-    },
-
-    button: {
-        height: 60,
-        backgroundColor: '#4D4AFA',
-        alignItems: 'center',
-        padding: 15,
-
     }
-
 })
