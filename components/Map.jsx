@@ -1,29 +1,27 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import MapView from 'react-native-maps';
 
+//map component that encapsulates google maps mapView
 function Map() {
-    const [region, setRegion] = React.useState({
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-    },)
-
-
-    const onRegionChange = (region) => {
-        //setRegion({ region });
-    }
-
 
     return (
 
-        <MapView
-            style={styles.map}
-            region={region}
-            onRegionChange={onRegionChange}
-        />
+        <View style={styles.container}>
+            <MapView
+                style={styles.map}
+                maxZoomLevel={5}
+                initialRegion={{
+                    latitude: -13.400652216166808,
+                    longitude: 27.747727714046007,
+                    latitudeDelta: 0.05,
+                    longitudeDelta: 0.09,
+                }}
+            />
 
+
+
+        </View>
 
     )
 
@@ -31,6 +29,13 @@ function Map() {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        ...StyleSheet.absoluteFillObject,
+        height: 800,
+        width: 400,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
 
     map: {
         ...StyleSheet.absoluteFillObject,

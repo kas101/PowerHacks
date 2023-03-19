@@ -1,34 +1,21 @@
-import React from 'react'
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
-function TreatmentFacility() {
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import Map from './Map';
+
+function TreatmentFacility({ navigation }) {
+
+    const locations = { 'name': 'Nkana Water', 'position': { 'lad': -12.79069861381155, 'log': 28.229424338278726 } }
+    const [viewMap, setViewMap] = React.useState(false);
+    const [position, setPosition] = React.useState(locations.position)
     return (
-        <ScrollView>
-            <View>
-                <Text style={styles.headerText}>Copperbelt Province</Text>
-                <ScrollView>
-                    <Text style={styles.locations}>Nkana Water</Text>
-                    <Text style={styles.locations}>Lukanga Water</Text>
-                    <Text style={styles.locations}>Kafubu Water</Text>
 
-                </ScrollView>
-            </View>
-            <View>
-                <Text style={styles.headerText}>Lusaka Province</Text>
-                <ScrollView>
-                    <Text style={styles.locations}>Lusaka Water</Text>
-                </ScrollView>
-            </View>
-            <View>
-                <Text style={styles.headerText}>Central Province</Text>
-                <ScrollView>
-                    <Text style={styles.locations}>Lukanga Water</Text>
-
-                </ScrollView>
-            </View>
-
-        </ScrollView>
+        <Map />
     )
+
+
 }
+
+
 
 const styles = StyleSheet.create({
     headerText: {

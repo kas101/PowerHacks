@@ -31,7 +31,7 @@ function CustomDrawerContent(props) {
                 style={{ marginTop: 200 }}
                 activeTintColor='#000000'
                 icon={({ color, size }) => <MaterialCommunityIcons name='exit-to-app' color={color} size={size} />}
-                label='Signout' />
+                label='Signout' onPress={() => { props.navigation.navigate("Login") }} />
 
         </DrawerContentScrollView>
     );
@@ -71,6 +71,7 @@ export default function DrawerNav() {
                 }}
                 name="Treatment Facility"
                 component={TreatmentFacility} />
+
         </Drawer.Navigator>
     )
 }
