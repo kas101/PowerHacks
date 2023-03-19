@@ -1,10 +1,13 @@
 import {
     createDrawerNavigator,
     DrawerContentScrollView,
+    DrawerItem,
     DrawerItemList
 } from '@react-navigation/drawer';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import Entypo from 'react-native-vector-icons/Entypo';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Leakage from '../components/Leakage';
 import TreatmentFacility from '../components/TreatmentFacility';
 
@@ -24,6 +27,11 @@ function CustomDrawerContent(props) {
                 <Text style={{ ...styles.text, fontStyle: 'italic', fontSize: 18, marginTop: -50, marginLeft: 10 }}>Tell Us Where & We are There</Text>
             </View>
             <DrawerItemList {...props} />
+            <DrawerItem
+                style={{ marginTop: 200 }}
+                activeTintColor='#000000'
+                icon={({ color, size }) => <MaterialCommunityIcons name='exit-to-app' color={color} size={size} />}
+                label='Signout' />
 
         </DrawerContentScrollView>
     );
@@ -47,8 +55,22 @@ export default function DrawerNav() {
             }}
             drawerContent={(props) => (<CustomDrawerContent {...props} />)}
         >
-            <Drawer.Screen name="Report Leakage" component={Leakage} />
-            <Drawer.Screen name="Treatment Facility" component={TreatmentFacility} />
+            <Drawer.Screen
+                options={{
+                    drawerActiveTintColor: '#000000',
+                    drawerIcon: ({ color, size }) => (<Entypo name='water' color={color} size={size} />),
+
+                }}
+                name="Report Leakage"
+                component={Leakage} />
+            <Drawer.Screen
+                options={{
+                    drawerActiveTintColor: '#000000',
+                    drawerIcon: ({ color, size }) => (<MaterialCommunityIcons name='factory' color={color} size={size} />),
+
+                }}
+                name="Treatment Facility"
+                component={TreatmentFacility} />
         </Drawer.Navigator>
     )
 }
