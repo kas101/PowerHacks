@@ -9,7 +9,6 @@ import React from 'react';
 import {
   StyleSheet
 } from 'react-native';
-import 'react-native-gesture-handler';
 import StackNav from './navigation/Stack.Nav';
 
 

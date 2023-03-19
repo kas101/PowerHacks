@@ -11,7 +11,7 @@ export default function StackNav() {
     return (
         <Stack.Navigator>
             <Stack.Screen options={{ headerShown: false }} name='Login' component={Login} />
-            <Stack.Screen name='Dashboard' component={Dashboard} />
+            <Stack.Screen name='Dashboard' options={{ headerShown: false }} component={Dashboard} />
             <Stack.Screen name='Register' component={Register} />
         </Stack.Navigator>
     )
